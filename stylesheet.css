@@ -1,0 +1,125 @@
+body {
+   background-color: aquamarine;
+   text-align: center;
+   margin: auto;
+   padding: auto;
+   color:#290080;
+   font-size:30px;
+   font-weight:550;
+   background-image: linear-gradient(0deg, #ffffff 25%, #f2eaff 50%, #dafff8 60%, #b4deff 70%);
+   background-size: cover;
+   background-repeat: none;
+   font-family: 'Courier New', Courier, monospace;
+   height: 100vh;
+}
+
+h1 {
+  text-align: left;
+  font-size: 5vh;
+  padding-left: 10vw;
+}
+
+#title {
+ display: flex;
+}
+
+#title img {
+  height: 9vh;
+  align-items: right;
+  padding-left: 40vw;
+  padding-top: 3vh;
+  filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
+
+
+
+#blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  margin: auto;
+  padding: auto;
+  border-radius: 10px;
+  top: 60vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.8s ease-out, opacity 0.5s ease-in;
+  z-index: 0;
+}
+
+#blocks.show {
+  opacity: 1;
+  transform: translateY(0); 
+  z-index: 2; 
+}
+
+#blocks div {
+  height: 170px;
+  width: 235px;
+  background: #d7b4ff;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  border-radius: 23px;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#blocks p {
+  padding-bottom: 10px;
+}
+
+@keyframes glow {
+	from {
+	  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ccffff, 0 0 40px #ccffff, 0 0 50px #ccffff, 0 0 60px #ccffff, 0 0 70px #ccffff;
+	}
+	
+	to {
+	  box-shadow: 0 0 20px #fff, 0 0 30px #ffffcc, 0 0 40px #ffffcc, 0 0 50px #ffffcc, 0 0 60px #ffffcc, 0 0 70px #ffffcc, 0 0 80px #ffffcc;
+	}
+}
+
+
+
+#BMO {
+  margin: auto;
+  padding-top: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+#body {
+  width: 300px;
+  height: auto;
+  padding-top: 7vh;
+}
+
+
+
+
+#face {
+  position: absolute;
+  width: 180px; 
+  height: auto; 
+  top: 50vh;
+  left: 45.3vw;
+}
+
+#expression {
+  position: absolute;
+  width: 180px; 
+  height: auto; 
+  top: 30vh;
+  right: 32vw;
+}
+
+
+#default {
+  opacity: 100%;
+  z-index: 1;
+}
+#smile {
+  opacity: 0;
+  z-index: 2;
+}
