@@ -12,9 +12,40 @@
 		<div id="title"><h1>Monica Paultre's<br>Spotify API</h1><a href="https://open.spotify.com/" target="_blank"><img src="assets/logo.png" alt="spotify logo"></a></div>
 
 		<div id="blocks">
-			<div id="artist"><p>Artist</p></div>
-			<div id="album"><p>Album</p></div>
-			<div id="song"><p>Song</p></div>
+
+			<div id="artist">
+				<p>Artist</p>
+				<p id="artistResults"></p>
+				<p id="search">
+					<input type="text" class="searchInput">
+					<button class="searchButton" onclick="searchSong('artist')">♫</button>
+				</p>
+			</div>
+
+			<div id="album">
+				<p>Album</p>
+				<p id="albumResults"></p>
+				<p id="search">
+					<input type="text" class="searchInput">
+					<button class="searchButton" onclick="searchSong('album')">♫</button>
+				</p>
+			</div>
+
+			<div id="track">
+				<p>Track</p>
+				<p id="trackResults"></p>
+				<p id="search">
+					<input type="text" class="searchInput">
+					<button class="searchButton" onclick="searchSong('track')">♫</button>
+				</p>
+			</div>
+
+			<div id="spotifyPlayerContainer">
+				<p>♫ I love<br>this song! ♫</p>
+				<iframe id="spotifyIframe"  width="100%" height="100%" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+			</div>
+		
+
 		</div>
 
 		<div id="BMO">
@@ -28,3 +59,4 @@
 		
 	</body>		
 </html>
+

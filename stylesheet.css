@@ -37,39 +37,55 @@ h1 {
 
 
 #blocks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;  
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px; 
+  flex-wrap: wrap; 
   min-height: 100px;
-  margin: auto;
-  padding: auto;
   border-radius: 10px;
   top: 60vh;
   opacity: 0;
   transform: translateY(50px);
-  transition: transform 0.8s ease-out, opacity 0.5s ease-in;
-  z-index: 0;
+  transition: transform 0.9s ease-out, opacity 0.6s ease-in;
+  z-index: -3;
 }
+
 
 #blocks.show {
   opacity: 1;
   transform: translateY(0); 
-  z-index: 2; 
+  z-index: -2;
 }
 
 #blocks div {
-  height: 170px;
-  width: 235px;
+  height: fit-content;
+  width: auto;
   background: #d7b4ff;
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin: 1.3vw;
   border-radius: 23px;
   animation: glow 1.5s ease-in-out infinite alternate;
+  padding: 25px;
+  min-width: 200px; 
+  max-width: 300px;
+  text-align: center;
 }
 
-#blocks p {
-  padding-bottom: 10px;
+
+#audioPlayer {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-auto-rows: 2;
 }
+
+#audioPlayer p {
+  font-size: 23px;
+}
+
 
 @keyframes glow {
 	from {
@@ -93,6 +109,8 @@ h1 {
   align-items: center;
   justify-items: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #body {
@@ -132,3 +150,6 @@ h1 {
   justify-items: center;
 }
 
+#albumResults, #trackResults, #artistResults {
+  font-size: 13px;
+}
